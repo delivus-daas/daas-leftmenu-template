@@ -1,0 +1,51 @@
+:root {
+    --greye5: #e5e5e5;
+    --primary: #6E6EFF;
+    --header-height: 48px;
+    --menu-width: 200px;
+    --app-height: 100%;
+    --dark: #141E28;
+}
+
+.container {
+    width: 100vw;
+    min-height: var(--app-height);
+    background: var(--dark);
+}
+
+.menu-temp-content {
+    background: var(--greye5);
+    width: calc(100vw - var(--menu-width));
+    height: 100vh;
+    padding-top: var(--header-height);
+    top: var(--header-height);
+    overflow: hidden;
+    overflow-y: auto;
+    /*overflow-x: scroll;*/
+    margin-left: var(--menu-width);
+}
+
+.menu-header {
+    height: var(--header-height);
+    background: var(--primary);
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    align-items: center;
+    width: 100vw;
+    padding: 0px 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.menu-child {
+    min-width: 824px;
+    /*min-height: 600px;*/
+    height: 100%;
+    /*-webkit-overflow-scrolling: touch;*/
+}
+

@@ -1,0 +1,42 @@
+.menu-head {
+    color: white;
+    margin: 12px 20px 24px;
+}
+
+.menu-count {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.ant-menu.ant-menu-dark .ant-menu-sub {
+    background: var(--dark) !important;
+}
+
+.ant-menu-vertical .ant-menu-submenu-title {
+    padding-left: 0px !important;
+}
+
+.ant-menu-item {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: white;
+    padding-left: 20px !important;
+}
+
+.ant-menu-submenu-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: white;
+    padding-left: 20px !important;
+    background-color: var(--dark)  !important;
+}
+
+.ant-menu-item-selected {
+    background-color: var(--greyblue)  !important;
+    color: var(--dark) !important;
+    height: 40px;
+}

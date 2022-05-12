@@ -1,0 +1,8 @@
+.ant-breadcrumb > span:last-child {
+    font-weight: 700;
+}
+
+.ant-breadcrumb-separator {
+    margin-right: 8px;
+    margin-left: 8px;
+}
