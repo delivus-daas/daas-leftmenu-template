@@ -40,3 +40,19 @@
     color: var(--dark) !important;
     height: 40px;
 }
+
+.menu-container {
+    width: var(--menu-width);
+    height: var(--app-height);
+    background: var(--dark) !important;
+    position: fixed;
+    zIndex: 101;
+    top: var(--header-height);
+}
+
+@media (max-width: 768px){
+    .menu-container {
+        visibility: hidden;
+        width: 0px;
+    }
+}

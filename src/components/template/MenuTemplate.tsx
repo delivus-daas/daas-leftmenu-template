@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import "./menu.style.css";
+import "./template.css";
 import CustomMenu from "../menu/CustomMenu";
 import CustomBreadcrumb from "../breadcrumb/CustomBreadcrumb";
 import { MenuTemplateProps } from "./MenuTemplate.type";
