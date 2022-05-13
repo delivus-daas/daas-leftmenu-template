@@ -10,18 +10,16 @@ interface MenuListType extends MenuDataType {
 interface CustomMenuProps {
     t: (text: string) => string;
     data: MenuListType[];
-    selectedMenu: string;
     defaultOpenKeys?: string[];
 }
 
-declare const CustomMenu: ({ data, selectedMenu, t, defaultOpenKeys, }: CustomMenuProps) => JSX.Element;
+declare const CustomMenu: ({ data, t, defaultOpenKeys }: CustomMenuProps) => JSX.Element;
 
 declare type BreadcrumbProps = {
     t: (text: string) => string;
-    paths?: any;
 };
 
-declare const CustomBreadcrumb: ({ t, paths }: BreadcrumbProps) => JSX.Element;
+declare const CustomBreadcrumb: ({ t }: BreadcrumbProps) => JSX.Element;
 
 interface MenuTemplateProps {
     t: (text: string) => string;

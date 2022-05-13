@@ -9,6 +9,5 @@ export interface MenuListType extends MenuDataType {
 export interface CustomMenuProps {
     t: (text: string) => string;
     data: MenuListType[];
-    selectedMenu: string;
     defaultOpenKeys?: string[];
 }
