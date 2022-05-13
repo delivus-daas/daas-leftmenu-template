@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./menu.css";
 // @ts-ignore
 import { Menu } from "antd";
@@ -6,13 +6,21 @@ import { useHistory } from "react-router-dom";
 import { CustomMenuProps, MenuDataType, MenuListType } from "./CustomMenu.type";
 
 const { SubMenu } = Menu;
-const CustomMenu = ({
-  data,
-  selectedMenu,
-  t,
-  defaultOpenKeys,
-}: CustomMenuProps) => {
+const CustomMenu = ({ data, t, defaultOpenKeys }: CustomMenuProps) => {
   const history = useHistory();
+  const [currentPath, setCurrent] = useState("home");
+
+  function setCurrentPath(location: any) {
+    setCurrent(location?.pathname);
+  }
+
+  useEffect(() => {
+    setCurrentPath(window.location);
+    const unlisten = history.listen(setCurrentPath);
+    return () => {
+      unlisten();
+    };
+  }, []);
 
   const handleSelect = (menuItem: any) => {
     if (!!menuItem.key) {
@@ -46,7 +54,7 @@ const CustomMenu = ({
     <Menu
       onClick={handleSelect}
       inlineIndent={0}
-      selectedKeys={[selectedMenu]}
+      selectedKeys={[currentPath]}
       style={{
         width: "var(--menu-width)",
         backgroundColor: "var(--dark)",
