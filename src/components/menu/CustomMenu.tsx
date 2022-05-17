@@ -31,7 +31,7 @@ const CustomMenu = ({ data, t, defaultOpenKeys }: CustomMenuProps) => {
   };
 
   const submenuNode = (menu: MenuListType, index?: number) => (
-    <SubMenu key={menu.title} title={t(menu.title)}>
+    <SubMenu data-cy="customMenuSelect" key={menu.title} title={t(menu.title)}>
       {menu.list &&
         menu.list.map((l, index) =>
           l.list ? submenuNode(l, index) : menuNode(l, index)
@@ -41,7 +41,7 @@ const CustomMenu = ({ data, t, defaultOpenKeys }: CustomMenuProps) => {
 
   const menuNode = (menu: MenuDataType, index?: number) => {
     return (
-      <Menu.Item key={menu.path}>
+      <Menu.Item key={menu.path} data-cy="customMenuSelectNode">
         <div className={"row"}>
           <span className={"flex"}>{t(menu.title)}</span>
           <span className={"medium menu-count"}>{menu.count}</span>

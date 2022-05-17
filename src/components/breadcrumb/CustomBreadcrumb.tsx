@@ -37,7 +37,7 @@ const CustomBreadcrumb = ({ t }: BreadcrumbProps) => {
     <Breadcrumb separator=">">
       {paths &&
         paths.map((path: string, index: number) => (
-          <Breadcrumb.Item key={"breaditem" + index}>{t(path)}</Breadcrumb.Item>
+          <Breadcrumb.Item data-cy="customBreadCrumbItem" key={"breaditem" + index}>{t(path)}</Breadcrumb.Item>
         ))}
     </Breadcrumb>
   );
