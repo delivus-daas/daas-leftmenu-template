@@ -33,6 +33,8 @@ const CustomBreadcrumb = ({ t }: BreadcrumbProps) => {
     }
     return breadPaths;
   }, [currentPath]);
+
+  console.log("custombread", paths);
   return (
     <Breadcrumb separator=">">
       {paths &&

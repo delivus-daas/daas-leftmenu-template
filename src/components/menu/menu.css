@@ -8,13 +8,9 @@
     font-weight: normal;
 }
 
-.ant-menu.ant-menu-dark .ant-menu-sub {
-    background: var(--dark) !important;
-    width: 200px;
-}
-
 .ant-menu-vertical .ant-menu-submenu-title {
     padding-left: 0px !important;
+    background: red;
 }
 
 .ant-menu-item {
@@ -24,7 +20,7 @@
     line-height: 16px;
     color: white;
     padding-left: 20px !important;
-    background: var(--dark) !important;
+    /*background: var(--dark) !important;*/
     width: 100%;
 }
 
@@ -35,7 +31,7 @@
     line-height: 16px;
     color: white;
     padding-left: 20px !important;
-    background-color: var(--dark)  !important;
+    /*background-color: var(--dark)  !important;*/
 }
 
 .ant-menu-item-selected {
@@ -45,13 +41,14 @@
 }
 
 .menu-container {
-    max-width: var(--menu-width);
+    padding-top: var(--header-height);
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
     width: var(--menu-width);
-    height: var(--app-height);
     background: var(--dark) !important;
     position: fixed;
     overflow-y: scroll;
-    top: var(--header-height);
 }
 
 @media (max-width: 768px){

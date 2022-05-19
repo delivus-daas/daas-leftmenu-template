@@ -1,6 +1,6 @@
 {
   "name": "daas-leftmenu-template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Left menu template is used in hub and seller app",
   "author": "Chimaa G",
   "license": "MIT",
@@ -18,7 +18,7 @@
   ],
   "types": "dist/index.d.ts",
   "peerDependencies": {
-    "antd": "^4.20.4",
+    "antd": "^4.15.5",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^5.2.0"
@@ -49,5 +49,11 @@
     "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.4.0",
     "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "antd": "^4.15.5",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^5.2.0"
   }
 }

@@ -8,12 +8,9 @@
     font-weight: normal;
 }
 
-.ant-menu.ant-menu-dark .ant-menu-sub {
-    background: var(--dark) !important;
-}
-
 .ant-menu-vertical .ant-menu-submenu-title {
     padding-left: 0px !important;
+    background: red;
 }
 
 .ant-menu-item {
@@ -23,6 +20,8 @@
     line-height: 16px;
     color: white;
     padding-left: 20px !important;
+    /*background: var(--dark) !important;*/
+    width: 100%;
 }
 
 .ant-menu-submenu-title {
@@ -32,7 +31,7 @@
     line-height: 16px;
     color: white;
     padding-left: 20px !important;
-    background-color: var(--dark)  !important;
+    /*background-color: var(--dark)  !important;*/
 }
 
 .ant-menu-item-selected {
@@ -42,12 +41,14 @@
 }
 
 .menu-container {
+    padding-top: var(--header-height);
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
     width: var(--menu-width);
-    height: var(--app-height);
     background: var(--dark) !important;
     position: fixed;
-    zIndex: 101;
-    top: var(--header-height);
+    overflow-y: scroll;
 }
 
 @media (max-width: 768px){
@@ -79,19 +80,17 @@
 .container {
     width: 100vw;
     min-height: var(--app-height);
-    background: var(--dark);
 }
 
 .menu-temp-content {
     background: var(--greye5);
-    width: calc(100vw - var(--menu-width));
-    height: 100vh;
+    width: 100vw;
+    min-height: var(--app-height);
     padding-top: var(--header-height);
+    padding-left: var(--menu-width);
     top: var(--header-height);
     overflow: hidden;
     overflow-y: auto;
-    /*overflow-x: scroll;*/
-    margin-left: var(--menu-width);
 }
 
 .menu-header {
@@ -114,7 +113,7 @@
 .menu-child {
     min-width: 824px;
     /*min-height: 600px;*/
-    height: 100%;
+    min-height: 100%;
     /*-webkit-overflow-scrolling: touch;*/
 }
 

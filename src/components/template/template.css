@@ -11,19 +11,17 @@
 .container {
     width: 100vw;
     min-height: var(--app-height);
-    background: var(--dark);
 }
 
 .menu-temp-content {
     background: var(--greye5);
-    width: calc(100vw - var(--menu-width));
-    height: 100vh;
+    width: 100vw;
+    min-height: var(--app-height);
     padding-top: var(--header-height);
+    padding-left: var(--menu-width);
     top: var(--header-height);
     overflow: hidden;
     overflow-y: auto;
-    /*overflow-x: scroll;*/
-    margin-left: var(--menu-width);
 }
 
 .menu-header {
@@ -46,7 +44,7 @@
 .menu-child {
     min-width: 824px;
     /*min-height: 600px;*/
-    height: 100%;
+    min-height: 100%;
     /*-webkit-overflow-scrolling: touch;*/
 }
 
