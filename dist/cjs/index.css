@@ -71,14 +71,25 @@
 }
 
 .ant-breadcrumb {
-    padding: 10px;
-    background: #FFFFFF;
-    width: 100%;
-    box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
     font-style: normal;
     font-size: 14px;
     line-height: 22px;
     color: rgba(0, 0, 0, 0.45);
+}
+
+.breadcrumb-container {
+    padding: 10px !important;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb-btn-left {
+    padding: 0px;
+    margin: 0px;
 }
 
 :root {
@@ -126,9 +137,7 @@
 
 .menu-child {
     min-width: 824px;
-    /*min-height: 600px;*/
     min-height: 100%;
-    /*-webkit-overflow-scrolling: touch;*/
 }
 
 @media (max-width: 768px){

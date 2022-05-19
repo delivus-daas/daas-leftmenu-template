@@ -1,11 +1,11 @@
 // @ts-ignore
-import { Breadcrumb } from "antd";
+import { Breadcrumb, Button } from "antd";
 import React, { useEffect, useMemo, useState } from "react";
 import "./breadcrumb.css";
 import { BreadcrumbProps } from "./CustomBreadcrumb.type";
 import { useHistory } from "react-router-dom";
 
-const CustomBreadcrumb = ({ t }: BreadcrumbProps) => {
+const CustomBreadcrumb = ({ t, leftButton }: BreadcrumbProps) => {
   const history = useHistory();
   const [currentPath, setCurrent] = useState("home");
 
@@ -36,17 +36,28 @@ const CustomBreadcrumb = ({ t }: BreadcrumbProps) => {
 
   console.log("custombread", paths);
   return (
-    <Breadcrumb separator=">">
-      {paths &&
-        paths.map((path: string, index: number) => (
-          <Breadcrumb.Item
-            data-cy="customBreadCrumbItem"
-            key={"breaditem" + index}
-          >
-            {t(path)}
-          </Breadcrumb.Item>
-        ))}
-    </Breadcrumb>
+    <div className={"breadcrumb-container"}>
+      <Breadcrumb separator=">">
+        {paths &&
+          paths.map((path: string, index: number) => (
+            <Breadcrumb.Item
+              data-cy="customBreadCrumbItem"
+              key={"breaditem" + index}
+            >
+              {t(path)}
+            </Breadcrumb.Item>
+          ))}
+      </Breadcrumb>
+      {!!leftButton && (
+        <Button
+          type={"text"}
+          className={"body primary breadcrumb-btn-left"}
+          onClick={leftButton?.onClick}
+        >
+          {leftButton?.title}
+        </Button>
+      )}
+    </div>
   );
 };
 

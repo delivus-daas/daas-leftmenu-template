@@ -43,9 +43,7 @@
 
 .menu-child {
     min-width: 824px;
-    /*min-height: 600px;*/
     min-height: 100%;
-    /*-webkit-overflow-scrolling: touch;*/
 }
 
 @media (max-width: 768px){
