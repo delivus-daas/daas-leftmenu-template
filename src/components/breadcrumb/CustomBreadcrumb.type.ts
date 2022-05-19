@@ -1,4 +1,6 @@
 export type BreadcrumbProps = {
   t: (text: string) => string;
-  leftButton?: { title: string; onClick: () => void };
+  rightButton?: BreadCrumbButtonType;
 };
+
+export type BreadCrumbButtonType = { title: string; onClick: () => void };

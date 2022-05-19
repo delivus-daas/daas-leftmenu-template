@@ -18,5 +18,5 @@ const Template: Story<BreadcrumbProps> = (args) => (
 export const Primary = Template.bind({});
 Primary.args = {
   t: (t: string) => t,
-  leftButton: { title: "로그아웃", onClick: () => {} },
+  rightButton: { title: "로그아웃", onClick: () => {} },
 };

@@ -5,7 +5,7 @@ import "./breadcrumb.css";
 import { BreadcrumbProps } from "./CustomBreadcrumb.type";
 import { useHistory } from "react-router-dom";
 
-const CustomBreadcrumb = ({ t, leftButton }: BreadcrumbProps) => {
+const CustomBreadcrumb = ({ t, rightButton }: BreadcrumbProps) => {
   const history = useHistory();
   const [currentPath, setCurrent] = useState("home");
 
@@ -48,13 +48,13 @@ const CustomBreadcrumb = ({ t, leftButton }: BreadcrumbProps) => {
             </Breadcrumb.Item>
           ))}
       </Breadcrumb>
-      {!!leftButton && (
+      {!!rightButton && (
         <Button
           type={"text"}
           className={"body primary breadcrumb-btn-left"}
-          onClick={leftButton?.onClick}
+          onClick={rightButton?.onClick}
         >
-          {leftButton?.title}
+          {rightButton?.title}
         </Button>
       )}
     </div>
