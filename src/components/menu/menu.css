@@ -10,6 +10,7 @@
 
 .ant-menu.ant-menu-dark .ant-menu-sub {
     background: var(--dark) !important;
+    width: 200px;
 }
 
 .ant-menu-vertical .ant-menu-submenu-title {
@@ -23,6 +24,8 @@
     line-height: 16px;
     color: white;
     padding-left: 20px !important;
+    background: var(--dark) !important;
+    width: 100%;
 }
 
 .ant-menu-submenu-title {
@@ -42,11 +45,12 @@
 }
 
 .menu-container {
+    max-width: var(--menu-width);
     width: var(--menu-width);
     height: var(--app-height);
     background: var(--dark) !important;
     position: fixed;
-    zIndex: 101;
+    overflow-y: scroll;
     top: var(--header-height);
 }
 
