@@ -27,6 +27,6 @@
 .breadcrumb-btn-left {
     padding: 0px;
     margin: 0px;
-    width: auto;
+    width: auto !important;
     height: auto;
 }
