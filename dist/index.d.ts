@@ -17,13 +17,14 @@ declare const CustomMenu: ({ data, t, defaultOpenKeys }: CustomMenuProps) => JSX
 
 declare type BreadcrumbProps = {
     t: (text: string) => string;
-    leftButton?: {
-        title: string;
-        onClick: () => void;
-    };
+    rightButton?: BreadCrumbButtonType;
+};
+declare type BreadCrumbButtonType = {
+    title: string;
+    onClick: () => void;
 };
 
-declare const CustomBreadcrumb: ({ t, leftButton }: BreadcrumbProps) => JSX.Element;
+declare const CustomBreadcrumb: ({ t, rightButton }: BreadcrumbProps) => JSX.Element;
 
 interface MenuTemplateProps {
     t: (text: string) => string;
