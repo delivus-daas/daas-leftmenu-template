@@ -13,14 +13,17 @@
     background: red;
 }
 
+.ant-menu.ant-menu-dark .ant-menu-sub {
+    background: var(--dark) !important;
+}
+
 .ant-menu-item {
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
     color: white;
-    padding-left: 20px !important;
-    /*background: var(--dark) !important;*/
+    padding-left: 40px !important;
     width: 100%;
 }
 
