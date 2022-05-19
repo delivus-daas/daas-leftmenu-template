@@ -55,7 +55,6 @@ const CustomMenu = ({ data, t, defaultOpenKeys }: CustomMenuProps) => {
       inlineIndent={0}
       selectedKeys={[currentPath]}
       className={"menu-container"}
-      style={{ width: 200 }}
       theme={"dark"}
       mode={"inline"}
       defaultOpenKeys={defaultOpenKeys}

@@ -20,6 +20,8 @@
     padding-top: var(--header-height);
     padding-left: var(--menu-width);
     top: var(--header-height);
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     overflow-y: auto;
 }
@@ -43,12 +45,12 @@
 
 .menu-child {
     min-width: 824px;
-    min-height: 100%;
+    flex: 1;
 }
 
 @media (max-width: 768px){
     .menu-temp-content {
-        margin-left: 0px;
+        padding-left: 0px;
         width: 100vw;
     }
 }
