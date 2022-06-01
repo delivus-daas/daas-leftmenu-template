@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./menu.css";
+// @ts-ignore
 import { Menu } from "antd";
 import { useHistory } from "react-router-dom";
 import { CustomMenuProps, MenuDataType, MenuListType } from "./CustomMenu.type";
