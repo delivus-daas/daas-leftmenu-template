@@ -78,6 +78,10 @@
     color: rgba(0, 0, 0, 0.45);
 }
 
+.link:hover {
+    color: var(--black65)
+}
+
 .breadcrumb-container {
     padding: 10px !important;
     background: #FFFFFF;

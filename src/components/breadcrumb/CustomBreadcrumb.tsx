@@ -5,7 +5,12 @@ import "./breadcrumb.css";
 import { BreadcrumbProps } from "./CustomBreadcrumb.type";
 import { useHistory } from "react-router-dom";
 
-const CustomBreadcrumb = ({ t, rightButton }: BreadcrumbProps) => {
+const CustomBreadcrumb = ({
+  t,
+  rightButton,
+  paths: pathsProp,
+  onClickLink,
+}: BreadcrumbProps) => {
   const history = useHistory();
   const [currentPath, setCurrent] = useState("home");
 
@@ -22,19 +27,28 @@ const CustomBreadcrumb = ({ t, rightButton }: BreadcrumbProps) => {
   }, []);
 
   const paths = useMemo(() => {
-    const breadPaths = [];
-    let paths = currentPath.split("/").filter((p) => p.length > 0);
-    for (let i = 0; i < paths.length; i++) {
-      let path = paths[i];
-      for (let j = 0; j < i; j++) {
-        path = paths[j] + "." + path;
+    let breadPaths = [];
+    if (!!pathsProp) {
+      breadPaths = pathsProp;
+    } else {
+      let paths = currentPath.split("/").filter((p) => p.length > 0);
+      for (let i = 0; i < paths.length; i++) {
+        let path = paths[i];
+        for (let j = 0; j < i; j++) {
+          path = paths[j] + "." + path;
+        }
+        breadPaths.push(path);
       }
-      breadPaths.push(path);
     }
     return breadPaths;
-  }, [currentPath]);
+  }, [currentPath, pathsProp]);
 
-  console.log("custombread", paths);
+  function handleClick(path: string) {
+    return function () {
+      !!onClickLink && onClickLink(path);
+    };
+  }
+
   return (
     <div className={"breadcrumb-container"}>
       <Breadcrumb separator=">">
@@ -43,6 +57,8 @@ const CustomBreadcrumb = ({ t, rightButton }: BreadcrumbProps) => {
             <Breadcrumb.Item
               data-cy="customBreadCrumbItem"
               key={"breaditem" + index}
+              className={onClickLink ? "link" : ""}
+              onClick={onClickLink ? handleClick(path) : undefined}
             >
               {t(path)}
             </Breadcrumb.Item>
